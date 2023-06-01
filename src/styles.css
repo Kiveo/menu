@@ -1,0 +1,49 @@
+:root {
+  /* general colors */
+  --active: #ccc;
+  --black: rgb(5, 5, 5);
+  --white: #ddd;
+  --dusk: rgb(52, 52, 52);
+  --grey50: rgb(85, 84, 82, 0.5);
+  --selected: rgb(194, 79, 37);
+  /* fonts and bgs */
+  --bg-primary: linear-gradient(0.3turn, var(--dusk), 1%, var(--black));
+  --bg-secondary: linear-gradient(0.5turn, var(--grey50), 1%, var(--white));
+  --highlight: rgba(232, 239, 240);
+  --primary: #777;
+  --secondary: var(--dusk);
+}
+
+/* -- GLOBAL CSS SETTINGS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.App {
+  color: var(--primary);
+  font-family: "Play", sans-serif;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.light {
+  background: #ddd;
+  background-image: var(--bg-secondary);
+}
+
+.dark {
+  background: #111;
+  background-image: var(--bg-primary);
+}

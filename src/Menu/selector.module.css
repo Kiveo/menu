@@ -1,0 +1,111 @@
+.selector {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 10vh 0 0 0;
+  width: 25vw;
+  min-width: 10rem;
+  max-width: 200px;
+}
+
+.selected {
+  color: var(--selected);
+}
+
+/* selected.option= Active state */
+.selected.option:hover {
+  color: var(--selected);
+}
+.selected.option {
+  background: linear-gradient(
+    to left,
+    transparent 50%,
+    transparent 15%,
+    var(--dusk) 0%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.selected.option:hover {
+  margin-left: -0.25rem;
+}
+.selected.option:hover:before {
+  content: none;
+}
+.selected.option:hover:after {
+  content: " <";
+  content: url("./left-chevron-light.svg");
+  width: 0.45rem;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+.selected:before {
+  content: " <";
+  content: url("./chevron-dark.svg");
+  width: 0.45rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.option {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: linear-gradient(
+    to left,
+    transparent 50%,
+    transparent 15%,
+    var(--highlight) 0%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-in;
+}
+
+.option:hover {
+  color: var(--secondary);
+  background-position: left bottom;
+}
+.option:hover:before {
+  content: url("./chevron-light.svg");
+  width: 0.45rem;
+  height: 100%;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.option:active {
+  transition-duration: 0s;
+  color: var(--active);
+}
+.option:active:before {
+  content: "> ";
+  content: url("./chevron-light.svg");
+  width: 0.45rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+/* Sub options */
+.sub {
+  padding-left: 2rem;
+}
+.subHeading:before {
+  content: none;
+}
+.subHeading:hover {
+  /* compensate for opposite chevron */
+  margin-left: -0.25rem;
+}
+.subHeading:hover:before {
+  content: none;
+}
+.subHeading:hover:after {
+  content: " <";
+  content: url("./left-chevron-light.svg");
+  width: 0.45rem;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
